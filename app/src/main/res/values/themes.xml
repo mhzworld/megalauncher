@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="launcher_background">#FF000000</color>
+
+    <style name="Theme.Launcher" parent="android:Theme.DeviceDefault.NoActionBar">
+        <item name="android:windowBackground">@color/launcher_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowShowWallpaper">false</item>
+    </style>
+</resources>
