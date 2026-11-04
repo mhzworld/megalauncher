@@ -9,7 +9,7 @@ import java.time.ZoneId
 data class WorldClock(val city: String, val zoneId: String)
 
 object WorldClocks {
-    val defaults = listOf(WorldClock("London", "Europe/London"), WorldClock("New York", "America/New_York"))
+    val defaults = listOf(WorldClock("London", "Europe/London"), WorldClock("Los Angeles", "America/Los_Angeles"))
 
     /** Shown before the user searches; includes common names that aren't time zone IDs (e.g. Mecca, Beijing). */
     val popular = listOf(

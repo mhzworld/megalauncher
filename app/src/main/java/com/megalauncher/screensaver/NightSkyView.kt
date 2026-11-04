@@ -25,7 +25,7 @@ import kotlin.random.Random
 /**
  * "MHz Night Sky": twinkling stars drifting in parallax layers, a slowly travelling moon and the
  * occasional shooting star on black. Everything keeps moving, so nothing burns into OLED panels.
- * With [showClock], a digital clock with seconds moves to a random spot every 60 seconds.
+ * With [showClock], a digital clock with seconds moves to a random spot every 30 seconds.
  */
 class NightSkyView(context: Context, private val showClock: Boolean, private val use24Hour: Boolean) : View(context) {
 
@@ -283,7 +283,7 @@ class NightSkyView(context: Context, private val showClock: Boolean, private val
         const val TWO_PI = 6.2831855f
         const val FRAME_MS = 33L
         const val GLOW_SCALE = 3.5f
-        const val CLOCK_MOVE_SECONDS = 60f
+        const val CLOCK_MOVE_SECONDS = 30f
         const val CLOCK_FADE_SECONDS = 0.4f
         val STAR_COLORS = intArrayOf(
             0xFFFFFFFF.toInt(), 0xFFFFFFFF.toInt(), 0xFFFFFFFF.toInt(),

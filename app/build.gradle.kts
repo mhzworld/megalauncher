@@ -17,7 +17,7 @@ android {
         targetSdk = 35
         // App version: bump versionName for each release and versionCode (+1) for every APK you install as an update.
         versionCode = 1
-        versionName = "0.1.0"
+        versionName = "0.1.1"
     }
 
     buildTypes {

@@ -159,14 +159,14 @@ private fun SolidBackground(background: BackgroundConfig) {
 private const val OLED_SCALE = 1.08f
 private const val OLED_MAX_SHIFT = 0.03f
 
-/** Every 20 s, glides to the next point on a slow Lissajous path (fraction of screen size). */
+/** Every 30 s, glides to the next point on a slow Lissajous path (fraction of screen size). */
 @Composable
 private fun rememberBurnInShift(): State<Offset> {
     val offset = remember { AnimatableValue(Offset.Zero, Offset.VectorConverter) }
     LaunchedEffect(Unit) {
         var step = 0
         while (true) {
-            delay(20_000)
+            delay(30_000)
             step++
             val target = Offset(sin(step * 0.7f) * OLED_MAX_SHIFT, cos(step * 0.9f) * OLED_MAX_SHIFT)
             offset.animateTo(target, tween(durationMillis = 4_000, easing = LinearEasing))

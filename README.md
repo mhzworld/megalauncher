@@ -1,11 +1,11 @@
 # Mega Launcher
 
-A simple, ad-free and tracker-free home screen launcher for **Google TV / Android TV**, built as a replacement for the stock Google TV launcher.
+A simple, ad-free and tracker-free home screen launcher for **Google TV / Android TV**, built as a replacement for the stock Android / Google TV launcher.
 
 - No ads, no analytics, no Google Play Services dependency.
 - Network requests are only made for the features you enable (weather, prayer times, background downloads).
-- Current version: **0.1.0** (shown in *Launcher settings → About*).
-- Source code: **<https://github.com/mhzworld/megalauncher>**
+- Current version: **0.1.1** (shown in *Launcher settings → About*).
+- Source code: **[https://github.com/mhzworld/megalauncher](https://github.com/mhzworld/megalauncher)**
 - License: **[MIT](LICENSE)** – free to use, modify and share.
 
 > Deployment and installation steps are in **[DEPLOY.md](DEPLOY.md)**.
@@ -23,14 +23,16 @@ Then open the folder in Android Studio (see [DEPLOY.md](DEPLOY.md)).
 ## Features
 
 ### Top bar
-| Position | Item |
-|---|---|
-| Left | Profile avatar (opens the profile switcher), **Search**, **Home**, **Apps** |
-| Right | Screensaver, **Launcher settings** (sliders icon), **All Android settings** (gear), clock |
+
+| Position | Item                                                                                                  |
+| -------- | ----------------------------------------------------------------------------------------------------- |
+| Left     | Profile avatar (opens the profile switcher), **Search**, **Home**, **Apps**         |
+| Right    | Screensaver, **Launcher settings** (sliders icon), **All Android settings** (gear), clock |
 
 The clock shows the time on top (12pt) and the date below (8pt). Time can be 24-hour (`17:05`) or 12-hour (`5:05 PM`); the date can be `Sat, 31 Oct 2026`, `Saturday, 31 October 2026`, `31 Oct 2026`, `Sat, Oct 31`, `31/10/2026`, `10/31/2026` or `2026-10-31`. Weather and prayer gadget times follow the same 12/24-hour setting.
 
 ### Profiles
+
 - Press the avatar to open **Who's watching?** and switch profiles, or add a new one.
 - Each profile has its own favourites, rows, gadgets, background, clock format and other launcher settings.
 - Profile picture: **Default** (initial letter, or a person icon if the name is empty), one of 8 built-in icons (smile, cat, robot, alien, panda, ghost, rocket, crescent moon), or your own image. Choose *Default* at any time to go back to the initial.
@@ -39,12 +41,14 @@ The clock shows the time on top (12pt) and the date below (8pt). Time can be 24-
 - Upgrading from an older version: your existing settings become the first profile, named after your old profile name.
 
 ### Favourites row
+
 - Round app icons that fill the circle edge-to-edge, in a compact horizontal row.
 - **Hold OK** on an icon for: Open, Move, Remove from favourites, View in Play Store, App info, Uninstall.
 - **Move mode**: use ◀ ▶ to reorder, press OK (or Back) when done.
 - The row ends with **All apps** and **Add favourite** buttons.
 
 ### Gadgets row
+
 Weather and Prayer times are shown by default; World clock and System monitor are off by default.
 
 - **Weather** – current temperature (°C / °F), description, feels-like, humidity and the next 5 hours.
@@ -67,10 +71,12 @@ Weather and Prayer times are shown by default; World clock and System monitor ar
 - Gadgets can be refreshed (OK), moved or removed (hold OK).
 
 ### App rows
+
 - Create your own rows (e.g. "Movies", "Kids"), add apps, rename, reorder apps, move rows up/down, or delete rows.
 - Apps are shown as TV banners when available.
 
 ### Background
+
 - **Default** (black), **Solid colour**, **Gradient** (Vertical, Horizontal, Center, Square, Circle), **Image / GIF / WebP** or **Video (MP4 / WebM)**.
 - Supported files:
   - Images: JPEG, PNG, WebP (incl. animated), GIF, BMP, HEIC/HEIF, AVIF (HEIF/AVIF need Android 9+).
@@ -84,7 +90,8 @@ Weather and Prayer times are shown by default; World clock and System monitor ar
 - **OLED TV** option: the background slowly drifts a few pixels to reduce burn-in.
 
 ### Screensaver
-- **MHz Night Sky with clock** (built-in, default): twinkling stars drifting in layers across a black sky, a moon (full, crescent or gibbous) slowly travelling across the screen, and occasional shooting stars, plus a digital clock with seconds and the date that fades to a new random position every 60 seconds. The clock follows the profile's 12/24-hour setting. Everything keeps moving, so nothing stays in one place (safe for OLED TVs).
+
+- **MHz Night Sky with clock** (built-in, default): twinkling stars drifting in layers across a black sky, a moon (full, crescent or gibbous) slowly travelling across the screen, and occasional shooting stars, plus a digital clock with seconds and the date that fades to a new random position every 30 seconds. The clock follows the profile's 12/24-hour setting. Everything keeps moving, so nothing stays in one place (safe for OLED TVs).
 - **MHz Night Sky**: the same sky without the clock.
 - The moon button (or *Launcher settings → Screensaver → Start screensaver now*) starts the chosen screensaver. Press any button to close it.
 - **Start screensaver after**: 1, 5, **10 (default)**, 15, 30 or 60 minutes without a button press on the launcher, or *Never*. This timer runs while Mega Launcher is on screen (an open launcher dialog postpones it); inside other apps, the TV's own screensaver setting applies. If the chosen screensaver can't be started automatically, the timer starts Night Sky instead of opening a settings screen.
@@ -92,7 +99,9 @@ Weather and Prayer times are shown by default; World clock and System monitor ar
 - Both Night Sky variants are also listed in the TV's own screensaver settings, so the TV can use them when idle in any app.
 
 ### Permissions
+
 Android TV only lets built-in apps add app widgets and change the screensaver, and has no on-screen prompt for other launchers. Grant both once, either:
+
 - **On the TV (no PC):** install [Shizuku](https://github.com/RikkaApps/Shizuku/releases), start it via *Wireless debugging* (Android 11+), then use *Launcher settings → Permissions → Allow app widgets & screensaver switching*. Shizuku does **not** root the TV.
 - **From a PC:**
   ```
@@ -103,7 +112,9 @@ Android TV only lets built-in apps add app widgets and change the screensaver, a
 The grants survive reboots and app updates (they are removed only when the app is uninstalled).
 
 ### Launcher settings
+
 Open with the sliders icon (top right):
+
 - Profile: name, picture, switch, add, delete
 - Clock: 24-hour time on/off, date format
 - World clock: on/off, clock 1 city, clock 2 city
@@ -117,6 +128,7 @@ Open with the sliders icon (top right):
 - About: app version, source code link, license (MIT), AI credit (built with GitHub Copilot · Claude Opus 5.5)
 
 ### Other
+
 - **Apps** screen: grid of every installed app, with the same hold-OK menu plus "Add to row".
 - **Search**: filters installed apps as you type.
 - The **Home** button always returns to the top of the home screen.
@@ -127,13 +139,13 @@ Open with the sliders icon (top right):
 
 ## Data sources and privacy
 
-| Feature | Service | When it is contacted |
-|---|---|---|
-| Weather | `api.weather.com` (with your key) or `api.open-meteo.com` | At the chosen auto-refresh interval (default hourly) while the weather gadget is enabled, or when you refresh |
-| City search | `geocoding-api.open-meteo.com` | Only when you search for a city |
-| Automatic location | `ipwho.is` (IP lookup) | At most every 12 h, only when location is set to automatic |
-| Prayer times | `www.e-solat.gov.my` (JAKIM) | About once a month, or when the zone changes |
-| Background link | The URL you enter | Only when you import an image or video |
+| Feature            | Service                                                       | When it is contacted                                                                                          |
+| ------------------ | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Weather            | `api.weather.com` (with your key) or `api.open-meteo.com` | At the chosen auto-refresh interval (default hourly) while the weather gadget is enabled, or when you refresh |
+| City search        | `geocoding-api.open-meteo.com`                              | Only when you search for a city                                                                               |
+| Automatic location | `ipwho.is` (IP lookup)                                      | At most every 12 h, only when location is set to automatic                                                    |
+| Prayer times       | `www.e-solat.gov.my` (JAKIM)                                | About once a month, or when the zone changes                                                                  |
+| Background link    | The URL you enter                                             | Only when you import an image or video                                                                        |
 
 No other servers are contacted. Settings, profiles, profile pictures, backgrounds and caches are stored only on the TV. Shizuku (if used) runs locally on the TV.
 
@@ -195,7 +207,7 @@ The version is set in [app/build.gradle.kts](app/build.gradle.kts) (`defaultConf
 
 ```kotlin
 versionCode = 1        // +1 for every APK you install as an update
-versionName = "0.1.0"  // the version shown to users
+versionName = "0.1.1"  // the version shown to users
 ```
 
 ## Configuration notes
@@ -216,7 +228,7 @@ See **[DEPLOY.md](DEPLOY.md)**.
 
 ## Contributing
 
-Issues and pull requests are welcome at <https://github.com/mhzworld/megalauncher>. Please describe the TV model and Android version when reporting a problem.
+Issues and pull requests are welcome at [https://github.com/mhzworld/megalauncher](https://github.com/mhzworld/megalauncher). Please describe the TV model and Android version when reporting a problem.
 
 ## Credits
 
@@ -227,6 +239,6 @@ Issues and pull requests are welcome at <https://github.com/mhzworld/megalaunche
 
 ## License
 
-Mega Launcher is open source under the **[MIT License](LICENSE)** © 2026 mhzworld – <https://github.com/mhzworld/megalauncher>.
+Mega Launcher is open source under the **[MIT License](LICENSE)** © 2026 mhzworld – [https://github.com/mhzworld/megalauncher](https://github.com/mhzworld/megalauncher).
 
 Third-party libraries (AndroidX / Jetpack Compose, Kotlin, kotlinx, Shizuku API) are used under the Apache License 2.0. Weather data comes from Open-Meteo (CC BY 4.0) or The Weather Company; prayer times come from JAKIM e-Solat.
